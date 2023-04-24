@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import { MDBContainer, MDBInputGroup, MDBNavbar, MDBNavbarBrand, MDBBtn } from 'mdb-react-ui-kit';
+// import { MDBContainer, MDBInputGroup, MDBNavbar, MDBNavbarBrand, MDBBtn } from 'mdb-react-ui-kit';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCartTotal } from '../features/cartSlice'
 
@@ -11,16 +11,27 @@ export default function App() {
     dispatch(getCartTotal())
   }, [cart])
   return (
-    <MDBNavbar light bgColor='light'>
-      <MDBContainer fluid>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
         <Link to="/">
-          <MDBNavbarBrand> ECommerce </MDBNavbarBrand>
+          <span className='navbar-brand'> ECommerce </span>
         </Link>
         <Link to="/">All Product</Link>
         <Link to="/cart">
-          <MDBBtn color="dark">Cart ({totalQuantity})</MDBBtn>
+          <button className='btn btn-warning'>Cart ({totalQuantity})</button>
         </Link>
-      </MDBContainer>
-    </MDBNavbar>
+      </div>
+    </nav>
+    // <MDBNavbar light bgColor='light'>
+    //   <MDBContainer fluid>
+    //     <Link to="/">
+    //       <MDBNavbarBrand> ECommerce </MDBNavbarBrand>
+    //     </Link>
+    //     <Link to="/">All Product</Link>
+    //     <Link to="/cart">
+    //       <MDBBtn color="dark">Cart ({totalQuantity})</MDBBtn>
+    //     </Link>
+    //   </MDBContainer>
+    // </MDBNavbar>
   );
 }

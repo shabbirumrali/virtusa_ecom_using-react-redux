@@ -16,30 +16,57 @@ const Checkout = () => {
   const handlePage = () => {
     setTimeout(() => {
       window.location.reload()
-    }, 100)
+    }, 0)
   }
   return (
-    <MDBAccordion borderless initialActive={1}>
-        <>
-          <MDBAccordionItem collapseId={1} headerTitle='Shipping/Billing Details'>
-            {/* Shipping component */}
-            <Shipping setShipping={setShipping} setShippingData={setShippingData} />
-          </MDBAccordionItem>
-          <br />
-          <MDBAccordionItem collapseId={2} headerTitle='Payment'>
-            {/* Payment Details */}
-            <Payment setPayment={setPayment} setPaymentDetail={setPaymentDetail} />
-          </MDBAccordionItem>
-        </>
-      { shipping && payment && (
-        <div className='invoice_container'>
-          <div className='inner_layout'>
-            <Invoice paymentDetail={paymentDetail} shippingData={shippingData} />
-            <Link to="/" onClick={handlePage} >Back to main Page</Link>
+    <div className='col-10'>
+      <div className="accordion" id="shipping">
+        <div className="accordion-item">
+          <h2 className="accordion-header">
+            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Shipping/Billing Details
+            </button>
+          </h2>
+          <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#shipping">
+            <div className="accordion-body">
+              <Shipping setShipping={setShipping} setShippingData={setShippingData} />
+            </div>
           </div>
         </div>
-      )}
-    </MDBAccordion>
+        <div className="accordion-item">
+          <h2 className="accordion-header">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Payment
+            </button>
+          </h2>
+          <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#shipping">
+            <div className="accordion-body">
+              <Payment setPayment={setPayment} setPaymentDetail={setPaymentDetail} />
+            </div>
+          </div>
+        </div>
+      </div>
+      {shipping && payment && (
+          <div className='invoice_container'>
+            <div className='inner_layout'>
+              <Invoice paymentDetail={paymentDetail} shippingData={shippingData} />
+              <Link to="/" onClick={handlePage} >Back to main Page</Link>
+            </div>
+          </div>
+        )}
+      {/* <MDBAccordion borderless initialActive={1}>
+          <>
+            <MDBAccordionItem collapseId={1} headerTitle='Shipping/Billing Details'>
+              <Shipping setShipping={setShipping} setShippingData={setShippingData} />
+            </MDBAccordionItem>
+            <br />
+            <MDBAccordionItem collapseId={2} headerTitle='Payment'>
+              <Payment setPayment={setPayment} setPaymentDetail={setPaymentDetail} />
+            </MDBAccordionItem>
+          </> 
+        
+      </MDBAccordion> */}
+    </div>
   );
 }
 export default Checkout;
