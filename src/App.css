@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+.error {
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(220, 20, 60, 0.5);
+  color: white;
+}
+.invoice_container {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(49, 49, 49);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner_layout {
+  width: 60%;
+  min-height: 300px;
+  color: white;
+}
+.details {
+  padding: 30px;
+  margin: 20px;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+
+}
+.shipping_info p{
+  text-align: left;
+}
+.payment_info p {
+  text-align: left;
+}
