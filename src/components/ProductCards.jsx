@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-// import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import ProductCard from './ProductCard';
 
 export default function App() {

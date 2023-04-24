@@ -1,5 +1,4 @@
 import React, {useState } from 'react';
-import { MDBAccordion, MDBAccordionItem } from 'mdb-react-ui-kit';
 import Shipping from './shipping/Shipping';
 import Payment from './payment/Payment';
 import Invoice from './invoice/Invoice';
@@ -54,18 +53,6 @@ const Checkout = () => {
             </div>
           </div>
         )}
-      {/* <MDBAccordion borderless initialActive={1}>
-          <>
-            <MDBAccordionItem collapseId={1} headerTitle='Shipping/Billing Details'>
-              <Shipping setShipping={setShipping} setShippingData={setShippingData} />
-            </MDBAccordionItem>
-            <br />
-            <MDBAccordionItem collapseId={2} headerTitle='Payment'>
-              <Payment setPayment={setPayment} setPaymentDetail={setPaymentDetail} />
-            </MDBAccordionItem>
-          </> 
-        
-      </MDBAccordion> */}
     </div>
   );
 }

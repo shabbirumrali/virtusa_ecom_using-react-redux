@@ -52,7 +52,7 @@ const CartPage = () => {
                                                     <div className="d-flex mb-4" style={{maxWidth: "300px"}}>
                                                         <button className="btn btn-danger px-3 me-2"
                                                             onClick={() => dispatch(decreaseItemQuantity(cartItem.id))}>
-                                                            <i className="fas fa-minus"></i>
+                                                            -
                                                         </button>
 
                                                         <div className="form-outline">
@@ -64,7 +64,7 @@ const CartPage = () => {
 
                                                         <button className="btn btn-primary px-3 ms-2"
                                                             onClick={() => dispatch(increaseItemQuantity(cartItem.id))}>
-                                                            <i className="fas fa-plus"></i>
+                                                            +
                                                         </button>
                                                         {/* Price  */}
                                                         <br />
@@ -78,7 +78,6 @@ const CartPage = () => {
                                                 <button className="btn btn-primary px-3 ms-2"
                                                     onClick={() => dispatch(increaseItemQuantity(cartItem.id))}>
                                                     Add Value to the Cart
-                                                    <i className="fas fa-plus"></i>
                                                 </button>
                                              )}
 
