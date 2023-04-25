@@ -18,7 +18,7 @@ const ProductCard = ({ item }) => {
             <li className="list-group-item">Esimated time: 4 days</li>
           </ul>
           <div className="card-body">
-            <button className='btn btn-outline-info' onClick={() => dispatch(addToCart(item))}>Add to Cart</button>
+            <button className='btn btn-warning btn-sm' onClick={() => dispatch(addToCart(item))}>Add to Cart</button>
           </div>
         </div>
       </>

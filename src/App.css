@@ -1,6 +1,3 @@
-.App {
-  text-align: center;
-}
 
 .App-logo {
   height: 40vmin;
@@ -45,7 +42,7 @@
 .invoice_container {
   width: 100vw;
   height: 100vh;
-  background: rgb(49, 49, 49);
+  background: #fff;
   position: absolute;
   top: 0;
   left: 0;
@@ -57,15 +54,13 @@
 .inner_layout {
   width: 60%;
   min-height: 300px;
-  color: white;
+  color: #000;
 }
 .details {
-  padding: 30px;
-  margin: 20px;
   background: white;
   color: black;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
 
 }
@@ -74,4 +69,21 @@
 }
 .payment_info p {
   text-align: left;
+}
+.billing_item {
+  display: flex;
+}
+.billing_item img {
+  max-width: 150px;
+}
+.item_detail p{
+  margin: 0;
+}
+.summary_container {
+  max-height: 500px;
+  box-shadow: 1px 1px 4px rgba(49, 49, 49, 0.3);
+}
+.order img {
+  max-width: 70px;
+  display: flex;
 }

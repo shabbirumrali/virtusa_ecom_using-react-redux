@@ -9,15 +9,18 @@ export default function App() {
   useEffect(() => {
     dispatch(getCartTotal())
   }, [cart])
+  
   return (
-    <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">
-        <Link to="/">
-          <span className='navbar-brand'> ECommerce </span>
+    <nav className="navbar bg-body-tertiary">
+      <div className="container-fluid">
+        <Link to="/" className='text-decoration-none'>
+          <span className='navbar-brand'>ECommerce</span>
         </Link>
-        <Link to="/">All Product</Link>
+        <Link to="/" className='text-decoration-none'>
+          <h6>All Product</h6>
+        </Link>
         <Link to="/cart">
-          <button className='btn btn-warning'>Cart ({totalQuantity})</button>
+          <button className='btn btn-warning btn-sm'>Cart ({totalQuantity})</button>
         </Link>
       </div>
     </nav>
