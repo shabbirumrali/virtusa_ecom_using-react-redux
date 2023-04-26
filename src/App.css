@@ -33,12 +33,6 @@
     transform: rotate(360deg);
   }
 }
-.error {
-  padding: 20px;
-  border-radius: 10px;
-  background: rgba(220, 20, 60, 0.5);
-  color: white;
-}
 .invoice_container {
   width: 100vw;
   height: 100vh;
@@ -86,4 +80,8 @@
 .order img {
   max-width: 70px;
   display: flex;
+}
+.error {
+  color: red;
+  border-color: red;
 }
